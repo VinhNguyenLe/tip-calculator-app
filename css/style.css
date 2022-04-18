@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --primary: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  margin: 40px 0 20px;
+  font-size: 24px;
+  letter-spacing: 6px;
+  color: var(--very-dark-cyan);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+footer {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--very-dark-cyan);
+}
+
+footer a {
+  color: var(--very-dark-cyan);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+.calculator {
+  background-color: var(--white);
+  width: 970px;
+  height: 512px;
+  margin: 24px;
+  border-radius: 32px;
+  display: flex;
+  padding: 27px;
+}
+
+.item {
+  margin: 27px;
+  width: 100%;
+}
+
+.input-title {
+  margin: 8px 0;
+}
+
+.bill-title {
+  position: relative;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left p {
+  color: var(--grayish-cyan);
+  font-weight: 700;
+}
+
+.left .input-form {
+  width: 100%;
+  text-align: right;
+  height: 50px;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 4px;
+  color: var(--very-dark-cyan);
+}
+
+.bill-title::after {
+  content: url("../images/icon-dollar.svg");
+  position: absolute;
+  top: 47px;
+  left: 16px;
+}
+
+.people-title {
+  position: relative;
+}
+
+.people-title::after {
+  content: url("../images/icon-person.svg");
+  position: absolute;
+  top: 47px;
+  left: 16px;
+}
+
+.left .input-form:focus {
+  color: var(--very-dark-cyan);
+  border: 2px solid var(--dark-grayish-cyan);
+}
+
+.left .input-form:hover {
+  border: 1px solid var(--very-dark-cyan);
+}
+
+.right {
+  border-radius: 16px;
+  background-color: var(--very-dark-cyan);
+}
+
+.selects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.select {
+  width: 31%;
+  height: 54px;
+  margin: 8px 0;
+  text-align: center;
+  padding: 8px 0;
+  color: var(--white);
+  font-size: 24px;
+  background-color: var(--very-dark-cyan);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select:hover {
+  background-color: var(--primary);
+  color: var(--very-dark-cyan);
+}
+
+.right {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tip-text h3 {
+  color: var(--very-light-grayish-cyan);
+}
+
+.tip-text p {
+  color: var(--grayish-cyan);
+}
+
+.money {
+  color: var(--primary);
+  font-size: 56px;
+}
+
+.reset-btn {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 4px;
+  font-size: 21px;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-btn:hover{
+    background-color: var(--light-grayish-cyan);
+}
+
+.btn-unactive {
+  pointer-events: none;
+  background-color: #0d686d;
+}
+
+.custom {
+  cursor: text;
+  background: var(--light-grayish-cyan);
+  outline: none;
+  border: none;
+  color: var(--dark-grayish-cyan);
+}
+
+.custom:focus {
+  border: 2px solid var(--primary);
+  color: var(--very-dark-cyan);
+  background: var(--light-grayish-cyan);
+}
+
+.custom:hover {
+  background-color: var(--light-grayish-cyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.error-msg{
+    position: absolute;
+    text-align: right;
+    color: rgb(235, 70, 70);
+    right: 0;
+}
+
+.error-msg.hide{
+    display: none;
+}
+
+#people.error-input{
+    border: 2px solid rgb(235, 70, 70);
+}

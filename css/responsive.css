@@ -1,0 +1,48 @@
+@media (max-width: 980px) {
+  .calculator {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 24px;
+  }
+  .item {
+    width: auto;
+    height: 400px;
+    margin: 20px 0;
+  }
+
+  .select {
+    width: 48%;
+  }
+
+  .right {
+    padding: 24px;
+    height: unset;
+  }
+
+  .money {
+    font-size: 32px;
+  }
+
+  .tip-text {
+    margin-bottom: 18px;
+  }
+
+  .reset-btn {
+    margin-top: 16px;
+  }
+
+  .left .input-form {
+    margin-bottom: 34px;
+  }
+
+  .custom:focus {
+    border: 2px solid var(--primary);
+    color: var(--very-dark-cyan);
+    background: var(--light-grayish-cyan);
+  }
+
+  .right {
+    margin-top: 80px;
+  }
+}
